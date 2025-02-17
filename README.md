@@ -21,7 +21,7 @@ OWNER_TYPE="USER"
 chmod +x ~/gitflic-pre-push.sh
 ```
 
-**3.** Добавьте новую команду `push-with-create` в git (указываем для команды путь к .sh файлу):
+**3.** Добавьте новую команду `push-with-create` в git (указываем в команде путь к .sh файлу):
 
 ``` bash
 git config --global alias.push-with-create '!f() { ~/gitflic-pre-push.sh "$@"; }; f'
@@ -32,13 +32,7 @@ git config --global alias.push-with-create '!f() { ~/gitflic-pre-push.sh "$@"; }
 **5.** Выполняйте первый пуш командой:
 
 ``` bash
-git push-with-create --set-upstream origin main
-```
-
-или (если upstream уже настроен):
-
-``` bash
-git push-with-create
+git push-with-create -u origin main
 ```
 
 Скрипт сработает для любой версии GitFlic (облачная или Self-Hosted) и поддерживает HTTPS/SSH Remote.
