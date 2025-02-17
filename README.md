@@ -29,6 +29,8 @@ git config --global alias.push-with-create '!f() { ~/gitflic-pre-push.sh "$@"; }
 
 **4.** Выполните `git init`, сделайте коммит, и добавьте remote в вашем репозитории
 
+Предполагается, что добавленный remote отсутствует в GitFlic
+
 **5.** Выполняйте первый пуш командой:
 
 ``` bash
